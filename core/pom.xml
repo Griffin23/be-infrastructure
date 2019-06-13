@@ -8,14 +8,10 @@
 		<version>1.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>controller</artifactId>
+	<artifactId>core</artifactId>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.ssq.infrastructure</groupId>
-			<artifactId>core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+
 	</dependencies>
 
 </project>

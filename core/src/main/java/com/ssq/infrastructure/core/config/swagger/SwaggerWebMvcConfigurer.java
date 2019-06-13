@@ -1,4 +1,4 @@
-package com.ssq.infrastructure.config.swagger;
+package com.ssq.infrastructure.core.config.swagger;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

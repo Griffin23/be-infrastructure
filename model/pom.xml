@@ -8,19 +8,6 @@
 		<version>1.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>controller</artifactId>
-
-	<dependencies>
-		<dependency>
-			<groupId>com.ssq.infrastructure</groupId>
-			<artifactId>core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ssq.infrastructure</groupId>
-			<artifactId>model</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
+	<artifactId>model</artifactId>
 
 </project>

@@ -9,9 +9,4 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>core</artifactId>
-
-	<dependencies>
-
-	</dependencies>
-
 </project>

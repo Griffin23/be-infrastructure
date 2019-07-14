@@ -23,7 +23,6 @@ public class DemoController {
     public ResponseEntity<ResultBean<TestListEnum>> foo() {
         ResultBean resultBean = new ResultBean();
         resultBean.setCode(0);
-        // TODO 空数组应该返回[]，空字符串返回"" ...
         resultBean.setResult(new TestListEnum());
         Message msg = new Message();
         msg.setEn("English prompt info");

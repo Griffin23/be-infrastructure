@@ -6,7 +6,6 @@
 		<groupId>com.ssq.infrastructure</groupId>
 		<artifactId>be-infrastructure</artifactId>
 		<version>1.0.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>model</artifactId>
 

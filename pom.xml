@@ -14,6 +14,7 @@
   <version>1.0.0</version>
   <name>be-infrastructure</name>
   <description>Backend infrastructure</description>
+  <packaging>pom</packaging>
 
   <properties>
     <java.version>1.8</java.version>
@@ -78,13 +79,13 @@
     <!-- End swagger bootstrap ui 相关依赖 -->
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+  <!--<build>-->
+    <!--<plugins>-->
+      <!--<plugin>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+      <!--</plugin>-->
+    <!--</plugins>-->
+  <!--</build>-->
 
 </project>

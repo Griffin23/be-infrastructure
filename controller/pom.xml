@@ -12,12 +12,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.ssq.infrastructure</groupId>
-			<artifactId>core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ssq.infrastructure</groupId>
-			<artifactId>model</artifactId>
+			<artifactId>service</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

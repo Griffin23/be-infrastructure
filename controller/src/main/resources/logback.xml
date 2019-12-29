@@ -15,7 +15,7 @@
             <fileNamePattern>logs/be-inf-log-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <!-- 日志文件最大的大小 -->
             <maxFileSize>50MB</maxFileSize>
-            <!-- 保存30天历史 -->
+            <!-- 日志保存时间 天数 -->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder>

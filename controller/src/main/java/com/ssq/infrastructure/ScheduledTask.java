@@ -1,5 +1,6 @@
 package com.ssq.infrastructure;
 
+import com.ssq.infrastructure.core.log.LoggerBase;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -18,5 +19,6 @@ public class ScheduledTask {
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
         System.out.println("现在时间是" + dateFormat.format(new Date()));
+        LoggerBase.info("fooabr");
     }
 }

@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.util.UUID;
 
 /**
  * File
@@ -29,9 +32,20 @@ public class FileController {
             resultBean.setResult("上传文件不能为空");
         }
 
-        System.out.println(file.getOriginalFilename() + " -- " + file.getContentType());
+        String dirPath = System.getProperty("user.dir") + "/upload-files";
+        File dir =  new File(dirPath);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
 
-
+        String newFileName = UUID.randomUUID().toString() + file.getOriginalFilename();
+        File newFile = new File(dirPath + "/" + newFileName);
+        try {
+            file.transferTo(newFile);
+            resultBean.setResult("上传成功");
+        } catch (IOException e) {
+            resultBean.setResult("上传失败");
+        }
         return ResponseEntity.status(HttpStatus.OK).body(resultBean);
     }
 }

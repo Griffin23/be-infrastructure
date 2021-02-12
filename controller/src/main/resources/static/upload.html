@@ -8,9 +8,50 @@
   <title>Document</title>
 </head>
 <body>
+<h2>upload by form</h2>
 <form action="./file/upload" enctype="multipart/form-data" method="post">
   <input type="file" name="my-file">
   <input type="submit">
 </form>
+<hr>
+<h2>upload by ajax + formData</h2>
+<input type="file" id="demo2-file">
+<button id="demo2-submit-btn">submit</button>
+<progress value="0" max="100" id="demo2-progress"></progress>
+<script>
+
+
+  var progressBar = document.getElementById('demo2-progress')
+  var xhr = new XMLHttpRequest()
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      progressBar.value = 100
+      console.log('上传成功');
+    }
+  }
+
+  // 上传进度
+  xhr.upload.onprogress = function(event) {
+    if (event.lengthComputable) {
+      var percent = (event.loaded / event.total) * 100
+      progressBar.value = percent
+    }
+  }
+
+  function uploadFile() {
+    var formData = new FormData()
+    formData.append('my-file', document.getElementById('demo2-file').files[0])
+
+    xhr.open('post', './file/upload')
+    xhr.send(formData)
+  }
+
+  var btn = document.getElementById('demo2-submit-btn')
+  // 这里应该要用节流控制，防止用户短间隔内频繁点击按钮
+  btn.addEventListener('click', uploadFile)
+
+</script>
+<hr>
 </body>
 </html>

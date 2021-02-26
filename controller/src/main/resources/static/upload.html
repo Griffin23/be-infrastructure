@@ -53,5 +53,22 @@
 
 </script>
 <hr>
+<h2>图片预览</h2>
+<input type="file" id="demo3-file">
+<div>
+  <img src="" alt="" id="demo3-preview-img" height="200">
+</div>
+<script>
+  var input = document.getElementById('demo3-file')
+  var previewImg = document.getElementById('demo3-preview-img')
+  input.addEventListener('change', function() {
+    var file = this.files[0]
+    var fileReader = new FileReader()
+    fileReader.readAsDataURL(file)
+    fileReader.onload = function() {
+      previewImg.src = this.result
+    }
+  })
+</script>
 </body>
 </html>
